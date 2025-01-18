@@ -28,11 +28,11 @@ from low to high levels in the dependency graph)
   procedural macros are implemented in `linera-views-derive`.
 
 * [`linera-execution`](https://linera-io.github.io/linera-protocol/linera_execution/index.html)
-  Persistent data and the corresponding logics for runtime and execution of Linera
+  Persistent data and the corresponding logic for runtime and execution of Linera
   applications.
 
 * [`linera-chain`](https://linera-io.github.io/linera-protocol/linera_chain/index.html)
-  Persistent data and the corresponding logics for chains of blocks, certificates, and
+  Persistent data and the corresponding logic for chains of blocks, certificates, and
   cross-chain messaging.
 
 * [`linera-storage`](https://linera-io.github.io/linera-protocol/linera_storage/index.html)
@@ -42,16 +42,16 @@ from low to high levels in the dependency graph)
   core Linera protocol, including client and server logic, node synchronization, etc.
 
 * [`linera-rpc`](https://linera-io.github.io/linera-protocol/linera_rpc/index.html)
-  Defines the data-type for RPC messages (currently all client &#x2194; proxy &#x2194;
+  Defines the data type for RPC messages (currently all client &#x2194; proxy &#x2194;
   chain &#x2194; chain interactions), and track the corresponding data schemas.
 
 * [`linera-client`](https://linera-io.github.io/linera-protocol/linera_client/index.html)
   Library for writing Linera clients.  Used for the command-line
-  client and the node service in `linera-service`, as well as the Web
+  client and the node service in `linera-service` and the Web
   client in [`linera-web`](https://github.com/linera-io/linera-web/).
 
 * [`linera-service`](https://linera-io.github.io/linera-protocol/linera_service/index.html)
-  Executable for clients (aka CLI wallets), proxy (aka validator frontend) and servers.
+  Executable for clients (aka CLI wallets), proxy (aka validator frontend), and servers.
 
 * [`linera-sdk`](https://linera-io.github.io/linera-protocol/linera_sdk/index.html) The
   library to develop Linera applications written in Rust for the Wasm virtual machine. The
@@ -73,9 +73,9 @@ export PATH="$PWD/target/debug:$PATH"
 # Import the optional helper function `linera_spawn_and_read_wallet_variables`.
 source /dev/stdin <<<"$(linera net helper 2>/dev/null)"
 
-# Run a local test network with the default parameters and a number of microchains
+# Run a local test network with the default parameters and several microchains
 # owned by the default wallet. (The helper function `linera_spawn_and_read_wallet_variables`
-# is used to set the two environment variables LINERA_{WALLET,STORAGE}.)
+# sets the two environment variables LINERA_{WALLET,STORAGE}.)
 linera_spawn_and_read_wallet_variables \
 linera net up
 
